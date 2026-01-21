@@ -3,14 +3,21 @@ project(PhysicsSandbox LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(SFML_DIR "D:/cpp/libs/SFML/SFML-3.0.2/lib/cmake/SFML")
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Window Network System)
+
+include_directories("${PROJECT_SOURCE_DIR}/src/core/vec2")
+include_directories("${PROJECT_SOURCE_DIR}/src/simulation/body")
+include_directories("${PROJECT_SOURCE_DIR}/src/app")
 
 # Include directories
 include_directories("${PROJECT_SOURCE_DIR}/src/core/vec2")
 include_directories("${PROJECT_SOURCE_DIR}/src/simulation/body")
 include_directories("${PROJECT_SOURCE_DIR}/src/app")
 
-# Собираем исполняемый файл
+# Г‘Г®ГЎГЁГ°Г ГҐГ¬ ГЁГ±ГЇГ®Г«Г­ГїГҐГ¬Г»Г© ГґГ Г©Г«
 add_executable(PhysicsSandbox
     src/app/main.cpp
-    # добавляй cpp файлы core и simulation, если они будут
- "src/simulation/world/world.h")
+)
+
+target_link_libraries(PhysicsSandbox PRIVATE SFML::Graphics SFML::Window SFML::Network SFML::System)

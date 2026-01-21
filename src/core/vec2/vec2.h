@@ -21,5 +21,10 @@ struct Vec2 {
 		x += point.x;
 		y += point.y;
 		return *this;
-	}
+	};
+
 };
+
+inline Vec2 operator*(const Vec2& v, float scalar) {
+	return Vec2(v.x * scalar, v.y * scalar);
+}

@@ -1,5 +1,5 @@
 #pragma once
-#include "../core/vec2/vec2.h"
+#include "vec2.h"
 
 struct Body
 {
