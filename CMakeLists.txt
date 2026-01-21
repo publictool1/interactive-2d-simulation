@@ -10,6 +10,12 @@ include_directories("${PROJECT_SOURCE_DIR}/src/core/vec2")
 include_directories("${PROJECT_SOURCE_DIR}/src/simulation/body")
 include_directories("${PROJECT_SOURCE_DIR}/src/app")
 
+# Include directories
+include_directories("${PROJECT_SOURCE_DIR}/src/core/vec2")
+include_directories("${PROJECT_SOURCE_DIR}/src/simulation/body")
+include_directories("${PROJECT_SOURCE_DIR}/src/app")
+
+# Ñîáèðàåì èñïîëíÿåìûé ôàéë
 add_executable(PhysicsSandbox
     src/app/main.cpp
 )
